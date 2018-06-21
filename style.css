@@ -2,7 +2,7 @@
 Theme Name: Calmface
 Theme URI: calmface.com
 Description: The Theme is designed and created by Purron for the personal blog.
-Version: 1.0
+Version: 1.0.2
 Author: Purron
 Author URI: calmface.com
 Tags: Blog, Works, Notes, Responsive
@@ -22,7 +22,7 @@ Tags: Blog, Works, Notes, Responsive
 
 body {
     margin: 0 auto;
-    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Muli", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: #3a3a3a;
     min-width: 320px;
