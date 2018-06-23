@@ -107,10 +107,12 @@ button:hover {
     height: 56px;
 }
 
-.head-content .logo span {
+.head-content .logo h1 {
+    display: inline;
     margin-left: 4px;
     font-size: 18px;
     font-weight: 400;
+    color: #111;
     vertical-align: super;
 }
 
@@ -140,7 +142,7 @@ button:hover {
         height: 48px;
     }
     
-    .head-content .logo span {
+    .head-content .logo h1 {
         display: none;
     }
 }
@@ -152,7 +154,7 @@ nav {
     float: right;
     margin-right: 56px;
     line-height: 80px;
-    color: #4b4b4b;
+    color: #111;
 }
 
 nav ul {
@@ -281,7 +283,7 @@ nav ul li:hover {
 /* ## 版权*/
 
 .footer .copyright {
-    margin: 0 auto;
+    margin: 8px auto;
     max-width: 1260px;
     padding-top: 16px;
 }
@@ -290,9 +292,14 @@ nav ul li:hover {
     margin-left: 80px;
     font-size: 14px;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 24px;
     color: #373737;
     cursor: default;
+}
+
+.footer .copyright .record {
+    font-weight: normal;
+    color: #747474;
 }
 
 /* ## Footer-响应式*/
@@ -343,7 +350,7 @@ nav ul li:hover {
 /* ## 版权*/
 
     .footer .copyright {
-        margin: 0 auto;
+        margin: 8px auto;
         max-width: 1260px;
         padding-top: 19px;
     }
@@ -352,7 +359,7 @@ nav ul li:hover {
         margin-left: 0px;
         font-size: 12px;
         font-weight: 600;
-        line-height: 56px;
+        line-height: 32px;
         text-align: center;
         color: #373737;
         cursor: default;
@@ -388,18 +395,19 @@ nav ul li:hover {
 }
 
 .intro .slogan {
-    color: #777777;
+    color: #777;
 }
 
 .intro .slogan:hover {
     cursor: default;
-    word-spacing: 0.5px;
-    padding-left: 2px;
+    word-spacing: 0.4px;
+    padding-left: 1px;
 }
 
 .intro .self {
     font-weight: 500;
     font-size: 18px;
+    color: #111;
     line-height: 32px;
 }
 
@@ -415,6 +423,15 @@ nav ul li:hover {
     .intro p {
         margin-left: 16px;
         margin-right: 16px;
+    }
+    
+    .intro .self {
+        text-align: center;
+    }
+    
+    .intro .slogan {
+        text-align: center;
+        line-height: 24px;
     }
     
 }
@@ -684,7 +701,8 @@ nav ul li:hover {
 
 .article {
     margin:0 auto;
-    max-width: 800px;
+/*    max-width: 800px;*/
+    max-width: 100%;
 }
 
 .article *::selection {
@@ -692,6 +710,10 @@ nav ul li:hover {
     background-color: #3b3b3b;
 }
 
+.article h1,h2,h3,h4,h5,h6,hr,p,ol,ul,pre,table {
+    margin: 0 auto;
+    max-width: 800px;
+}
 
 .article h1 {
     margin-top: 48px;
@@ -701,7 +723,7 @@ nav ul li:hover {
 
 .article h2 {
     position: relative;
-    margin: 32px 0 32px;
+    margin: 32px auto;
     font-size: 28px;
     font-weight: 400;
     color: #4b4b4b;
@@ -787,6 +809,34 @@ nav ul li:hover {
     border-top: 2px solid grey;
     color: whitesmoke;
     background-color: #1D1F21;
+}
+
+.article div {
+    max-width: 100%;
+}
+
+.article div .wp-caption-text {
+    color: #aaa;
+}
+
+.article div img {
+    margin-bottom: 0px;
+}
+
+.article div .wp-caption-text:before {
+    content:"△ ";
+}
+
+.article .aligncenter {
+    margin: 0 auto;
+}
+
+.article .alignleft {
+    float: left;
+}
+
+.article .alignright {
+    float: right;
 }
 
 .article pre {
@@ -894,10 +944,10 @@ nav ul li:hover {
 }
 
 .article .tag {
+    margin: 24px auto;
     font-size: 18px;
     color: #c3c3c3;
     text-align: center;
-    margin: 0 0 24px;
 }
 
 .article .tag span {
@@ -1031,7 +1081,6 @@ nav ul li:hover {
 .content-index .relate-post {
     max-width: 800px;
     margin: 24px auto;
-    margin-left: 6px;
     text-align: left;
     font-size: 32px;
 }
@@ -1281,9 +1330,12 @@ nav ul li:hover {
     
     .divi {
     margin: 24px auto;
-    padding-left: 16px;
+    padding: 0px;
     }
     
+    .divi hr {
+        margin: 0 auto;
+    }
     
     .comments {
         margin: 24px 64px;

@@ -10,8 +10,10 @@
             
             <div class="copyright">
                 <p>© <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.COM | Designed by Purron.</p>
+                <p class="record"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></p>
             </div>
         </div>
+        
 
         <?php wp_footer(); ?>
 

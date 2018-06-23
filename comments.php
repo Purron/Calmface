@@ -42,9 +42,6 @@
     
 </div>
 
-
-<!--'type=comment&callback=calmface_comment'-->
-
 <!--我的评论-->
 <div class="my-comments">
         

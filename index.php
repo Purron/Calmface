@@ -8,16 +8,6 @@
             <div class="intro">
                 <p class="self"><?php echo esc_html( get_theme_mod( 'calmface_home_self' ) ); ?></p>
                 <p class="slogan"><?php echo esc_html( get_theme_mod( 'calmface_home_title' ) ); ?></p>
-<!--
-                I’m Purron - an UX Designer 👨‍🎨 from China 🇨🇳
-                <p>Using English here for hiding, concealing, filtering…
-    </p>
-                <p>The rest of me, robbed from depression and social phobia, is good.
-    </p>
-                <p>Just write here about ux, thoughts 💡 and everything.
-    </p>
-                <p>Thank you. </p>
---> 
                 
                 <div class="divi"><hr /></div>
                 

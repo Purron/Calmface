@@ -67,7 +67,7 @@
     while (have_posts()) {
       the_post(); update_post_caches($posts); ?>
 
-    <div class="content-item" id=”post-<?php the_ID(); ?> style="background:url(<?php the_post_thumbnail_url( array(398, 264) ); ?>) no-repeat center center;background-size: cover;">
+    <div class="content-item" id=”post-<?php the_ID(); ?> style="background:url(<?php the_post_thumbnail_url( array(398, 264) ); ?>) no-repeat center center;background-size: cover; background-color:#f3f3f3;">
 
                     <a href="<?php the_permalink(); ?>">
                         <div class="overlay-content">
