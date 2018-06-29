@@ -7,7 +7,7 @@
 
 <div class="comments">
     
-    <h1 class="comments-head">✐ 评论 (<?php comments_popup_link('0', '1', '%', '', '评论已关闭'); ?>)</h1>
+    <h1 class="comments-head">评论 (<?php comments_popup_link('0', '1', '%', '', '评论已关闭'); ?>)</h1>
     
 <?php 
 

@@ -9,7 +9,7 @@
                 <p class="self"><?php echo esc_html( get_theme_mod( 'calmface_home_self' ) ); ?></p>
                 <p class="slogan"><?php echo esc_html( get_theme_mod( 'calmface_home_title' ) ); ?></p>
                 
-                <div class="divi"><hr /></div>
+                <div class="divi-f"><hr /></div>
                 
             </div>
 
@@ -19,7 +19,12 @@
                 
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 
-                <div class="content-item" id=”post-<?php the_ID(); ?> style="background:url(<?php the_post_thumbnail_url( array(398, 264) ); ?>) no-repeat center center;background-size: cover; background-color:#f3f3f3;">
+                <div class="content-item" id=”post-<?php the_ID(); ?> >
+                    
+                    <?php if ( has_post_thumbnail() ) : ?>
+                    <img src="<?php the_post_thumbnail_url( array(398, 264) ); ?>">
+                    <?php endif ?>
+                    
                     <a href="<?php the_permalink(); ?>">
                         <div class="overlay-content">
                             <p class="time"><?php the_time('y/m/j') ?></p>

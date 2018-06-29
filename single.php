@@ -5,7 +5,8 @@
 <!--        特色图片-->
 
 <?php if ( has_post_thumbnail() ) : ?>
-<div class="h-pic" id="h-pic" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
+<div class="h-pic" id="h-pic">
+    <img src="<?php the_post_thumbnail_url('full'); ?>" >
     <span class="category"><?php  
                         foreach((get_the_category()) as $category)  
                         {  
@@ -40,11 +41,11 @@
     
 <?php the_content(); ?>
 
-    <div class="divi"><hr /></div>
+<!--    <div class="divi"><hr /></div>-->
 
 </div>
 
-
+<div class="divi"><hr /></div>
 <!--        相关文章-->
     
     
