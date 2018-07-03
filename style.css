@@ -532,7 +532,7 @@ nav ul li:hover {
 
 /* ### 5.3.2 列表画布-响应式*/
 
-@media screen and (min-width: 856px) and (max-width: 1320px) {
+@media screen and (min-width: 856px) and (max-width: 1275px) {
     
     .content-index {
         margin: 0 auto;
