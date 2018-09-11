@@ -1283,6 +1283,7 @@ nav ul li:hover {
 }
 
 .article .aligncenter {
+    display: block;
     margin: 0 auto;
 }
 
