@@ -18,6 +18,7 @@
         
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
         <link rel="stylesheet" href="https://use.typekit.net/hpy1ywq.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
@@ -33,25 +34,4 @@
     
     
     <body>
-        <div class="header">
-            
-            <div class="head-content">
-                
-                <a class="logo" href="<?php bloginfo('url'); ?>/">
-                    <img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-echo $image[0]; ?>"/>
-                    <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-                </a>
-                
-                <nav class="nav">
-                    <?php 
-
-                    // 列出顶部导航菜单，菜单名称为mymenu，只列出一级菜单
-                    
-                        wp_nav_menu( array( 'menu' => 'mymenu', 'depth' => 1) );
-                    ?>
-                </nav>
-                
-            </div>
-        </div>
+        

@@ -85,6 +85,12 @@ function calmface_comment($comment, $args, $depth)
             <p class="user-name"><?php printf(__('<cite class="author_name">%s</cite>'), get_comment_author_link()); ?></p>
             <p class="c-time"><?php echo get_comment_time('Y-m-d H:i'); ?></p>
             <?php edit_comment_link('修改'); ?>
+            <?php if ( ($depth < 5)&&( comments_open() ) ): ?>
+            <?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+
+        
+        <?php else : ?>
+        <?php endif; ?>
         </div>
 
         <p>
@@ -95,11 +101,7 @@ function calmface_comment($comment, $args, $depth)
              <?php comment_text(); ?>
         </p>
         
-        <?php if ( ($depth < 5)&&( comments_open() ) ): ?>
-        <button class="reply"><?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth']))) ?></button> 
         
-        <?php else : ?>
-        <?php endif; ?>
 
     </div>
 </div>

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php include 'topbar.php';?>
 
 <div class="wrap">
 
@@ -9,7 +10,6 @@
         the_archive_title( '<h1>', '</h1>' );
         the_archive_description( '<h2>', '</h2>' );
         ?>
-        <div class="divi archive"><hr /></div>
     </div>
 
 
@@ -31,7 +31,7 @@
                 }  
                 ?></p>
                 <p class="title"><?php the_title(); ?><p>
-                <p class="tag"><span><?php the_tags('#', ' &nbsp;', ''); ?></span></p>
+                <?php the_tags('<ul class="tagul"><li>','</li><li>','</li></ul>'); ?>
             </div>
             </a>
         </div>
@@ -48,8 +48,8 @@
     <!--翻页-->
 
     <div class="page">
-        <p class="newer"><?php previous_posts_link('Newer', 0); ?></p>
-        <p class="older"><?php next_posts_link('Older', 0); ?></p>
+        <p class="newer"><?php previous_posts_link('NEW', 0); ?></p>
+        <p class="older"><?php next_posts_link('OLD', 0); ?></p>
     </div>
 
 </div>

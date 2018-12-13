@@ -7,7 +7,7 @@
 
 <div class="comments">
     
-    <h1 class="comments-head">评论 (<?php comments_popup_link('0', '1', '%', '', '评论已关闭'); ?>)</h1>
+    <h1 class="comments-head"><i class="fa fa-commenting-o"></i> 评论 (<?php comments_popup_link('0', '1', '%', '', '评论已关闭'); ?>)</h1>
     
 <?php 
 
@@ -57,22 +57,34 @@
     
     <!-- Comment Form -->
     <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+        <p class="my-comments-title">发表评论 Leave a comment :</p>
+        <textarea class="my-comments-content" name="comment" placeholder="请输入评论内容 Say something"></textarea>
         
 <?php if ( !is_user_logged_in() ) : ?>
         
-        <input class="name" name="author" type="text" placeholder="Name" value="<?php echo $comment_author; ?>" size="23">
-        <input class="email" name="email" type="text" placeholder="E-mail" value="<?php echo $comment_author_email; ?>" size="23">
-        <input class="website" name="website" type="text" placeholder="Website" value="<?php echo $comment_author_url; ?>" size="23">
+        <input class="name" name="author" type="text" placeholder="昵称 Name" value="<?php echo $comment_author; ?>" size="23">
+        <input class="email" name="email" type="text" placeholder="邮箱 E-mail" value="<?php echo $comment_author_email; ?>" size="23">
+        <input class="website" name="website" type="text" placeholder="网站 Website (可选)" value="<?php echo $comment_author_url; ?>" size="23">
         
 <?php else : ?>
         
-        <p class="state-c"><?php if (function_exists('get_avatar') && get_option('show_avatars')) { echo get_avatar($comment, 24); } ?> <?php echo $user_identity; ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="退出登录">注销</a> </p>
+        <p class="state-c">
+            <?php
+                if (function_exists('get_avatar') && get_option('show_avatars')) { 
+                    echo get_avatar($comment, 24);
+                }
+            ?>
+            <?php
+            echo $user_identity;
+            ?>
+            <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="退出登录">注销</a>
+        </p>
         
 <?php endif; ?>
 
-        <textarea class="my-comments-content" name="comment" placeholder="Say something..."></textarea>
+        
 
-        <a onClick="<?php echo $id; ?>" class="button medium black right"><input class="ok" type="submit" value="评论"></a>
+        <a onClick="<?php echo $id; ?>" class="button medium black right"><input class="ok" type="submit" value="贴上！"></a>
 
 <?php comment_id_fields(); ?>
 <?php do_action('comment_form', $post->ID); ?>

@@ -2,229 +2,158 @@
 Theme Name: Calmface
 Theme URI: calmface.com
 Description: The Theme is designed and created by Purron for the personal blog.
-Version: 1.0.5
+Version: 1.1 (newest edit in december, 2018)
 Author: Purron
 Author URI: calmface.com
 Tags: Blog, Works, Notes, Responsive
 */
 
+@font-face {
+    font-family: Calmface;
+    src: url('http://files.calmface.com/resources/Calmface-Regular.ttf');
+    font-weight: normal;
+}
 
-/*索引目录
+@font-face {
+    font-family: Calmface;
+    src: url('http://files.calmface.com/resources/Calmface-Bold.ttf');
+    font-weight: bold;
+}
 
-1 全局设置
-    1.1 所有元素
-    1.2 文字和元件样式
-    1.3 WRAP容器
-2 头部
-    2.1 header设置
-    2.2 logo区域
-    2.3 header&logo-响应式
-    2.4 导航区域
-    2.5 导航-响应式
-3 翻页
-4 尾部
-    4.1 社交链接
-    4.2 版权和备案
-    4.3 尾部-响应式
-5 首页
-    5.1 介绍和标语
-    5.2 介绍和标语-响应式
-    5.3 文章列表
-        5.3.1 列表画布
-        5.3.2 列表画布-响应式
-        5.3.3 文章
-        5.3.4 文章-响应式
-        5.3.5 文章标题信息
-        5.3.6 文章标题信息-响应式
-6 分割线
-7 文章
-    7.1 特色图片
-    7.2 特色图片-响应式
-    7.3 文章区域
-    7.4 相关文章
-8 评论
-    8.1 评论列表
-    8.2 评论列表-响应式
-    8.3 我的评论
-9 MARKDOWN格式
-    9.1 全局设置
-    9.2 标题
-    9.3 内容
-    9.4 图片区域
-    9.5 列表
-    9.6 引用
-    9.7 表格
-    
-    9.8 响应式
-10 归档页
-11 其他内容
+@font-face {
+    font-family: Calmface;
+    src: url('http://files.calmface.com/resources/Calmface-Bold.ttf');
+    font-weight: lighter;
+}
+
+/*----------------------------------0 样式清零-------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   css样式清零
 */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-
-/*
-
-Muli typeface
-    1 200 normal;
-    2 300 normal;
-    3 400 normal&italic;
-    4 700 normal&italic;
-
-Colors
-    1 #000
-    2 #333
-    3 #666
-    4 #999
-    5 #ccc
-    6 #fff
-
-*/
-
-
-
-
-
-/* # 1 全局设置------------------------------------------*/
-
+/*-------------------------------------1 全局-------------------------------------*/
 
 /* ## 1.1 所有元素*/
 
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
+/*设定字体、尺寸、隐藏横向滑动条*/
 
 body {
-    margin: 0 auto;
-    font-family: "Muli", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Calmface", "Muli", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    color: #3a3a3a;
     min-width: 320px;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
-/* ## 1.2 文字和元件样式*/
-
-h1 {
-    margin:40px 0 32px;
-    font-size: 2em;
-    font-weight: 400;
-    color: #333;
-}
+/* ## 1.2 画布*/
 
 a {
-    color: #000;
+    color: #fb6666;
     text-decoration: none;
 }
-
-button {
-    margin-top: 8px;
-    width: 80px;
-    height: 32px;
-    background-color: #f5f5f5;
-    color: #373737;
-    border:none;
-    border-radius: 2px;
-}
-
-button:hover {
-    color: #fff;
-    background-color: #3b3b3b;
-}
-
-/* ## 1.3 容器*/
 
 .wrap {
     position: relative;
     margin: 0 auto;
-    width: 100%;
-    max-width: 1260px;
+    max-width: 1200px;
+    min-height: 552px;
+    clear: both;
 }
 
-
-
-
-/* # 2 头部------------------------------------------*/
-
-
-/* ## 2.1 header设置*/
+/*-------------------------------------2 header.php-------------------------------------*/
 
 .header {
-    min-height: 80px;
+    height: 48px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #f4f4f4;
 }
 
 .head-content {
-    max-width: 1260px;
-    min-width: 855px;
+    height: 48px;
+    max-width: 1200px;
+    min-width: 768px;
     margin: 0 auto;
+    line-height: 48px;
 }
 
-
-/* ## 2.2 logo区域*/
+/* ### 2.1.1 logo*/
 
 .head-content .logo {
     display: block;
-    position: relative;
     float: left;
-    top: 12px;
-    left: 20px;
-    font-size: 0px;
+    margin-left: 24px;
+    height: 48px;
 }
 
 .head-content .logo img {
-    height: 56px;
+    display: block;
+    float: left;
+    margin-top:8px;
+    height: 32px;
 }
 
 .head-content .logo h1 {
-    display: inline;
-    margin-left: 4px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #111;
-    vertical-align: super;
+    display: block;
+    float: left;
+    margin: 0 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
 }
 
-
-/* ## 2.3 header&logo-响应式*/
-
-@media screen and (max-width:855px) {
-    
-    .header {
-        min-height: 96px;
-    }
-    
-    .head-content {
-        max-width: 855px;
-        min-width: 320px;
-    }
-    
-    .head-content .logo {
-        display: block;
-        position: static;
-        width: 100%;
-        margin: 12px auto;
-        text-align: center;
-    }
-    
-    .head-content .logo img {
-        margin: 12px;
-        height: 48px;
-    }
-    
-    .head-content .logo .blog-title {
-        display: none;
-    }
-}
-
-
-/* ## 2.4 导航区域*/
+/* ### 2.1.2 nav*/
 
 nav {
     float: right;
-    margin-right: 56px;
-    line-height: 80px;
-    color: #111;
+    margin-right: 24px;
+    line-height: 48px;
 }
 
 nav ul {
@@ -232,542 +161,482 @@ nav ul {
 }
 
 nav ul li{
-    margin-left: 56px;
+    margin-left: 16px;
     text-transform: uppercase;
-    font-weight: 700;
-}
-
-nav ul li:hover {
-    text-decoration: none;
-    border-bottom: 2px solid #000;
-}
-
-
-/* ## 2.5 导航-响应式*/
-
-@media screen and (max-width:855px) {
-    
-    nav {
-        display: block;
-        float: none;
-        width: 100%;
-        margin: 0;
-        line-height: 40px;
-        text-align: center;
-    }
-    
-    nav ul {
-        display: inline-block;
-    }
-    
-    nav ul li {
-        display: inline;
-        margin: 0 12px;
-    }
-    
-}
-
-/* # 3 翻页------------------------------------------*/
-
-.page {
-    width: 100%;
-    
-}
-
-.page .newer a {
-    padding: 16px 32px;
-    display: block;
-    float: left;
-    font-size: 32px;
-    color: #A4A4A4;
-}
-
-.page .older a {
-    padding: 16px 10%;
-    display: block;
-    float: right;
-    font-size: 32px;
-    color: #A4A4A4;
-}
-
-.page .older a:hover {
-    color: #888;
-}
-
-.page .newer a:hover {
-    color: #888;
-}
-
-
-/* # 4 尾部------------------------------------------*/
-
-.footer {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 120px;
-    border-bottom: 8px solid #000;
-}
-
-
-/* ## 4.1 社交链接*/
-
-.footer .social-contact {
-    margin: 0 auto;
-    width: 1260px;
-}
-
-.footer .social-contact a,span {
-    margin-right: 12px;
-}
-
-.footer .social-contact .behance {
-    margin-left: 80px;
-}
-
-.footer .social-contact .behance img {
-    width: 64px;
-    height: 25px;
-}
-
-.footer .social-contact .behance img:hover {
-    filter: grayscale(40%);
-}
-
-.footer .social-contact .weibo img {
-    width: 25px;
-    height: 25px;
-}
-
-.footer .social-contact .weibo img:hover {
-    filter: grayscale(40%);
-}
-
-.footer .social-contact .weixin img {
-    width: 25px;
-    height: 25px;
-}
-
-.footer .social-contact .weixin .qrs {
-    position: relative;
-    opacity: 0;
-    left: -16px;
-    width: 64px;
-    height: 64px;
-}
-
-.footer .social-contact .weixin .qrs:hover {
-    opacity: 1;
-    left: -25px;
-}
-
-/* ## 4.2 版权和备案*/
-
-.footer .copyright {
-    margin: 8px auto;
-    max-width: 1260px;
-    padding-top: 16px;
-}
-
-.footer .copyright p {
-    margin-left: 80px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 24px;
-    color: #373737;
-    cursor: default;
-}
-
-.footer .copyright .record {
-    font-weight: normal;
-    color: #747474;
-}
-
-/* ## 4.3 尾部-响应式*/
-
-@media screen and (max-width: 855px){
-    
-/* ## 社交*/
-
-    .footer {
-        width: 100%;
-        margin: 0 auto;
-        border-top: 80px solid #fff;
-        border-bottom: 8px solid #000;
-    }
-
-    .footer .social-contact {
-        margin: 40px auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer .social-contact a,span {
-        margin-left: 12px;
-    }
-
-    .footer .social-contact .behance {
-        margin-left: 40px;
-    }
-
-    .footer .social-contact .behance img {
-        width: 64px;
-        height: 25px;
-    }
-
-    .footer .social-contact .weibo img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .footer .social-contact .weixin img {
-        display: none;
-    }
-
-    .footer .social-contact .weixin .qrs {
-        display: none
-    }
-    
-/*版权*/
-
-    .footer .copyright {
-        margin: 8px auto;
-        max-width: 1260px;
-        padding-top: 19px;
-    }
-
-    .footer .copyright p {
-        margin-left: 0px;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 32px;
-        text-align: center;
-        color: #373737;
-        cursor: default;
-    }
-}
-
-
-
-
-
-/* # 5 首页------------------------------------------*/
-
-/* ## 5.1介绍和标语*/
-
-.intro {
-    max-width: 1260px;
-    padding-top: 48px;
-    padding-bottom: 24px;
-    margin-top: 32px;
-    margin-bottom: 40px;
-}
-
-.intro p {
-    margin-left: 80px;
-    margin-right: 80px;
-    font-weight: 350;
     font-size: 16px;
-    color: #4B4B4B;
-    line-height: 40px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+nav ul li a:hover {
+    color: #000;
     transition: all 0.1s ease-in-out;
 }
 
-.intro .slogan {
-    color: #777;
+@media screen and (max-width: 767px) {
+    nav {
+        display: none;
+    }
 }
 
-.intro .slogan:hover {
-    cursor: default;
-    word-spacing: 0.4px;
-    padding-left: 1px;
+/*-------------------------------------3 intro.php-------------------------------------*/
+
+.intro {
+    position: relative;
+    margin: 160px auto;
+    width: 96%;
+    max-width: 834px;
+    min-height: 240px;
+}
+
+.intro .intro-logo {
+    position: absolute;
+    left: 144px;
+    top: -64px;
+    height: 64px;
+}
+
+.intro .intro-logo img{
+    height: 64px;
 }
 
 .intro .self {
-    font-weight: 500;
-    font-size: 18px;
-    color: #111;
-    line-height: 32px;
+    margin-left: 144px;
+    margin-bottom: 8px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
 }
 
+.intro .intro-cover {
+    display: block;
+    float: left;
+    width: 288px;
+    height: 120px;
+    filter: grayscale(100%);
+    transition: all 1s ease-in-out;
+}
 
-/* ## 5.2 介绍和标语-响应式*/
+.intro .intro-cover:hover {
+    filter: grayscale(0%);
+}
 
-@media screen and (max-width: 855px) {
+.intro .slogan {
+    margin-left: 16px;
+    float: left;
+    max-width: 518px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #999;
+}
+
+.intro .intro-nav {
+    margin-top: 8px;
+    float: left;
+    line-height: 25px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 871px) {
+    .intro .slogan {
+        max-width: 418px;
+    }
+}
+
+@media screen and (max-width: 767px) {
     
     .intro {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    
-    .intro p {
-        margin-left: 16px;
-        margin-right: 16px;
+        margin: 108px 8px 16px;
+        min-height: 108px;
     }
     
     .intro .self {
-        text-align: center;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    .intro .intro-logo {
+        left: 16px;
+        top: -72px;
+    }
+    
+    .intro .intro-cover {
+        display: none;
     }
     
     .intro .slogan {
-        text-align: center;
-        line-height: 24px;
+        display: none;
+    }
+    
+    .intro .intro-nav {
+        margin-top: 0px;
+        float: none;
+        color: #fb6666;
     }
     
 }
 
 
-/* ## 5.3 文章列表*/
+/*-------------------------------------4 bottombar.php-------------------------------------*/
 
-/* ### 5.3.1 列表画布*/
+.bottombar {
+    margin-top: 120px;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+/*招呼*/
+.bottombar .hello {
+    margin: 0 auto;
+    padding: 24px 8px 16px;
+    max-width: 560px;
+    color: #666;
+    text-align: center;
+}
+
+.bottombar .hello p {
+    font-size: 20px;
+    line-height: 24px
+}
+
+.bottombar .hello p a {
+    color: #fb6666;
+}
+
+.bottombar .hello p a:hover {
+    color: #000;
+    transition: all 0.1s ease-in-out;
+}
+
+/*社交链接*/
+.bottombar .social-contact {
+    margin: 0 auto;
+    padding-bottom: 24px;
+    max-width: 560px;
+    text-align: center;
+    word-spacing: 16px;
+}
+
+.bottombar .social-contact .social-contact-item {
+    display: inline-block;
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+.bottombar .social-contact .social-contact-item i {
+    margin-top: 6px;
+    font-size: 24px;
+    color: #000;
+}
+
+.bottombar .social-contact .social-contact-item i:hover {
+    color: #fb4444;
+}
+
+.bottombar .social-contact .weixin-item:hover {
+    background-color: #fff;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.bottombar .social-contact .weixin-item:hover .fa-weixin{
+    color: #000;
+}
+
+.bottombar .social-contact .weixin-item:hover > .weixin-account {
+    opacity: 1;
+    left: 36px;
+}
+
+.bottombar .social-contact .social-contact-item .weixin-account {
+    position: absolute;
+    left: 32px;
+    top: 0px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 8px 12px 4px;
+    
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    .bottombar {
+        margin-top: 80px;
+    }
+    
+    .bottombar .social-contact .weixin-item {
+        background-color: #fff;
+    }
+    
+    .bottombar .social-contact .social-contact-item .weixin-account {
+        opacity: 1;
+    left: 36px;
+    }
+    
+    .bottombar .social-contact {
+        padding-right: 32px;
+    }
+}
+
+
+/*-------------------------------------5 footer.php-------------------------------------*/
+
+.footer {
+    width: 100%;
+    height: 72px;
+    margin: 0 auto;
+    
+    border-top: 1px solid #f4f4f4;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footer .footer-content .copyright {
+    float: left;
+    margin-left: 24px;
+}
+
+.footer .footer-content .copyright p {
+    font-size: 14px;
+    line-height: 72px;
+    color: #999;
+}
+
+.footer .footer-content .record {
+    float: right;
+    margin-right: 24px;
+}
+
+.footer .footer-content .record p {
+    font-size: 14px;
+    line-height: 72px;
+    color: #ccc;
+}
+
+@media screen and (max-width: 767px){
+   
+    .footer .footer-content .copyright {
+        float: none;
+        padding-top: 16px;
+        margin-left: 0px;
+    }
+
+    .footer .footer-content .copyright p {
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .footer .footer-content .record {
+        float: none;
+        margin-right: 0px;
+    }
+
+    .footer .footer-content .record p {
+        line-height: 20px;
+        text-align: center;
+    }
+    
+}
+
+/*-------------------------------------6 index.php-------------------------------------*/
+
 
 .content-index {
-    position: relative;
     margin: 0 auto;
-    max-width: 1260px;
-    margin-bottom: 32px;
-    padding-top: 16px;
-    font-size: 0px;
+    max-width: 1200px;
+    font-size: 0;
+    text-align: center;
 }
 
-
-/* ### 5.3.2 列表画布-响应式*/
-
-@media screen and (min-width: 856px) and (max-width: 1275px) {
-    
-    .content-index {
-        margin: 0 auto;
-        max-width: 840px;
-        padding-top: 16px;
-        padding-bottom: 32px;
-        font-size: 0px;
-    }
-
-}
-
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 767px) {
     
     .content-index {
         width: 100%;
+        padding: 0;
+        text-align: center;
     }
-    
 }
 
-/* ### 5.3.3 文章*/
+/*content-item*/
 
 .content-item {
     position: relative;
-    overflow: hidden;
     display: inline-block;
-    margin: 10px 11px 10px;
-    width: 398px;
-    height: 264px;
+    margin: 0px 8px 32px;
+    width: 372px;
+    height: 200px;
+    overflow: hidden;
     background-color: #ccc;
+    text-align: left;
 }
 
 .content-item img {
     width: 100%;
     height: 100%;
+/*    维持比例关系不变*/
     object-fit: cover;
+    transition: all 0.6s ease-in-out;
 }
 
-/* ### 5.3.4 文章-响应式*/
+.content-item:hover img {
+    transform: scale(1.1);
+}
 
-@media screen and (max-width: 855px) {
-    
+/*避免因为屏幕宽度变小每行只能显示一个*/
+@media screen and (min-width: 768px) and (max-width: 818px) {
+ 
     .content-item {
-        margin: 0 0px 1px;
-        width: 100%;
-        height: 240px;
-        overflow: hidden;
+        margin: 2px;
     }
-
 }
 
-
-/* ### 5.3.5 文章标题信息*/
+/*overlay-content*/
 
 .content-item .overlay-content {
-    width: 100%;
-    height: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    color: #fff;
-    transition: all 0.25s ease-in-out;
-    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 80px;
+    bottom: -80px;
+    background: #fff;
     opacity: 0;
+    
+    transition: all 0.15s ease-in-out;
 }
 
-.content-item .overlay-content:hover {
+.content-item:hover .overlay-content {
     opacity: 1;
+    bottom: 0px;
 }
 
-.content-item .overlay-content .time {
-    margin: 8px 28px;
-    float: right;
-    font-weight: 200;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: right;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
-}
-
-.content-item .overlay-content:hover .time {
-    margin: 16px 28px;
-    opacity: 1;
-}
-
-.content-item .overlay-content .category, .tag, .title {
+.content-item .overlay-content .category,.tag,.title {
     display: block;
-    margin-left: 28px;
-    margin-right: 28px;
 }
 
 .content-item .overlay-content .category {
-    margin-top: 72px;
-    font-size: 18px;
-    font-weight: 300;
+    margin: 8px;
+    font-size: 14px;
+    line-height: 14px;
     text-transform: uppercase;
-    color: #fff;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
+    color: #fb6666;
 }
 
-.content-item .overlay-content:hover .category {
-    margin-top: 80px;
-    opacity: 1;
-}
 
 .content-item .overlay-content .title {
-    margin-top: 4px;
-    font-weight: 400;
-    font-size: 24px;
-    color: #FFFFFF;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
+    margin: 8px;
+    height: 24px;
+    overflow: hidden;
+    font-size: 22px;
+    line-height: 22px;
+    color: #000;
 }
 
-.content-item .overlay-content:hover .title {
-    opacity: 1;
+.content-item .overlay-content .tagul {
+    margin-left: 8px;
+    height: 14px;
 }
 
-.content-item .overlay-content .tag {
-    margin-top: 16px;
-    margin-left: 16px;
-    font-weight: 300;
+.content-item .overlay-content .tagul li {
+    float: left;
+    margin-right: 8px;
     font-size: 14px;
-    color: #FFFFFF;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
-    transition-delay: 0.3s;
+    line-height: 14px;
 }
 
-.content-item .overlay-content:hover .tag {
-    margin-top: 8px;
-    opacity: 1;
+.content-item .overlay-content .tagul li a {
+    color: #999;
 }
 
-.content-item .overlay-content .tag a {
-    color: #fff;
+.content-item .overlay-content .tagul li:hover a {
+    color: #fb6666;
 }
 
-/* ### 5.3.6 文章标题信息-响应式*/
-
-@media screen and (max-width: 855px) {
+/*小于1200认为是触控屏幕，所以需要直接显示标题信息*/
+@media screen and (max-width: 1199px) {
     
     .content-item .overlay-content {
         opacity: 1;
-        background: rgba(0, 0, 0, 0);
-    }
-    
-    .content-item .overlay-content .time {
-        margin: 16px 28px;
-        opacity: 0;
-    }
-
-    .content-item .overlay-content .category {
-        margin-top: 72px;
-        text-align: center;
-        opacity: 1;
-        text-shadow: 0px 0px 20px #3b3b3b;
-    }
-
-    .content-item .overlay-content .title {
-        text-align: center;
-        opacity: 1;
-        text-shadow: 0px 0px 20px #3b3b3b;
-    }
-
-
-    .content-item .overlay-content .tag {
-        margin-top: 8px;
-        text-align: center;
-        opacity: 1;
-        text-shadow: 0px 0px 20px #3b3b3b;
-    }
-
-}
-
-/* # 6 分割线------------------------------------------*/
-
-.divi-f {
-    margin: 24px auto;
-    padding-left: 80px;
-}
-
-.divi-f hr {
-    height: 4px;
-    width: 32px;
-    background-color: #000;
-    border: none;
-}
-
-@media screen and (max-width: 855px) {
-    .divi-f {
-        padding: 0;
-    }
-    
-    .divi-f hr {
-        margin: 0 auto;
+        bottom: 0px;
     }
     
 }
 
-.divi {
-    padding: 0;
-}
-
-.divi hr {
-    height: 4px;
-    width: 32px;
-    margin: 56px auto;
-    background-color: #000;
-    border: none;
-}
-
-.article .divi {
-    padding: 0;
-}
-
-.article .divi hr {
-    height: 4px;
-    width: 32px;
-    margin: 56px auto;
-    background-color: #000;
-    border: none;
+@media screen and (max-width: 767px) {
+    
+    .content-item {
+        margin: 0px 0px 8px;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 
 
-/* # 7 文章------------------------------------------*/
+
+/*page*/
+
+.page {
+    margin-top: 8px;
+    margin-bottom: 120px;
+    width: 100%;
+    height: 33px;
+}
+
+.page .newer {
+    display: block;
+    float: left;
+    margin-left: 24px;
+}
+
+.page .older {
+    display: block;
+    float: right;
+    margin-right: 24px;
+}
+
+.page .newer a {
+    font-size: 24px;
+    line-height: 33px;
+    color: #666;
+}
+
+.page .older a {
+    font-size: 24px;
+    line-height: 33px;
+    color: #666;
+}
+
+.page .older a:hover {
+    color: #ccc;
+}
+
+.page .newer a:hover {
+    color: #fb6666;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .page {
+        margin-top: 32px;
+    }
+}
 
 
-/* ## 7.1 特色图片*/
 
+/*-------------------------------------7 single-------------------------------------*/
+
+
+/*特色图片*/
 .h-pic {
     width: 100%;
-    height: 640px;
+    height: 320px;
     background-size: cover;
     background-position: center center;
 }
@@ -778,57 +647,138 @@ nav ul li:hover {
     object-fit: cover;
 }
 
-.h-pic .category {
-    position: relative;
-    padding: 0 12px;
-    left: 20px;
-    top: -56px;
-    color: #4B4B4B;
-    font-size: 24px;
-    font-weight: 350;
-    background: rgba(255, 255, 255, 0.8);
-    transition: all 0.25s ease-in-out;
-}
-
-
-/* ## 7.2 特色图片-响应式*/
-
-@media screen and (max-width: 855px){
-   
-    .h-pic {
-        height: 400px;
-        
-    }
-    
-    .h-pic .category {
-        position: static;
-        display: block;
-        margin-top: 1px;
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-        color: #4B4B4B;
-        opacity: 0.9;
-        padding: 8px 12px;
-        background-color: #fff;
-    }
-}
-
-/* ## 7.3 文章区域*/
-
-
+/*文章标题*/
 .article {
-    margin:0 auto;
+    margin:40px auto;
+    margin-bottom: 80px;
     max-width: 100%;
 }
 
-/* ## 7.4 相关文章*/
+.article .article-head {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.article .article-head .category {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article .article-head .category .post-categories {
+    display: inline;
+    list-style-type: none;
+}
+
+.article .article-head .category .post-categories li{
+    display: inline;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.article .article-head .category .post-categories li a {
+    color: #fb6666;
+}
+
+.article .article-head .category .post-categories li a:hover {
+    color: #000;
+}
+
+.article .article-head .category .time {
+    display: inline;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ccc;
+}
+
+.article .article-head .category .time:before {
+    content: " | ";
+}
+
+.article .article-head .title {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.article .article-head .article-tagul {
+    margin: 0 auto;
+    max-width: 800px;
+    text-decoration: none;
+}
+
+.article .article-head .article-tagul li {
+    display: inline;
+    margin-right: 8px;
+    padding: 2px 12px 2px;
+    font-size: 16px;
+    line-height: 32px;
+    background-color: #f4f4f4;
+    border-radius: 16px;
+    text-align: center;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.article .article-head .article-tagul a {
+    color: #000;
+}
+
+.article .article-head .article-tagul li:hover a {
+    color: #fff;
+    text-decoration:none;
+}
+
+.article .article-head .article-tagul li:hover {
+    background-color: #fb6666;
+}
+
+.article .article-head .article-tagul li:before {
+    display: none;
+}
+
+/*文章区域*/
+
+.article .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*文章分割logo*/
+
+.article-end-img {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.article-end-img img {
+    height: 64px;
+    filter:opacity(0.2);
+}
+
+@media screen and (max-width: 767px){
+    .article-end-img {
+        margin-bottom: 40px;
+    }
+    
+    .article .article-content {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/*相关文章*/
 
 .content-index .relate-post {
     max-width: 800px;
-    margin: 24px auto;
+    margin: 32px auto;
     text-align: left;
-    font-size: 32px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold
 }
 
 .content-index .relate-state {
@@ -836,47 +786,83 @@ nav ul li:hover {
     margin: 24px auto;
     text-align: left;
     font-size: 16px;
-    color: #3a3a3a;
+    color: #ccc;
+}
+
+@media screen and (max-width: 767px){
+    .content-index .relate-post {
+        margin-left: 8px;
+        margin-bottom: 24px;
+    }
+    .content-index .relate-state {
+        margin-left: 8px;
+    }
 }
 
 
 
+/*评论*/ 
 
-/* # 8 评论-----------------------------------------*/ 
 
-
-/* ## 8.1 评论列表*/
+/*评论列表*/
 
 .comments {
-    margin: 80px auto;
+    margin: 44px auto;
+    margin-bottom: 40px;
     max-width: 800px;
     line-height: 27px;
 }
 
 .comments .comments-head {
-    font-size: 32px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
     text-align: left;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
+.comments .state{
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+}
+
+@media screen and (max-width: 767px){
+    .comments {
+        margin-top: 36px;
+    }
+    
+    .comments .comments-head {
+        margin-left: 8px;
+        margin-bottom: 16px;
+        padding-left: 0px;;
+    }
+    
+    .comments .state{
+        margin-left: 8px;
+    }
+}
+
+
+/*评论内容*/
 .comments .parent {
-    margin-top: 12px;
+    margin: 8px 0px 8px 48px;
 }
 
 .comments .children {
-    margin-left: 0px;
-    margin-bottom: 40px;
-    padding-left: 12px;
-    border-left: 2px solid #f5f5f5;
-}
-
-.comments .children img {
-    display: none;
+    margin: 8px 0px 8px 48px;
+    padding: 8px;
+    padding-left: 16px;
+    background-color: #f4f4f4;
 }
 
 .comments .user {
     position: relative;
     margin-top: 12px;
+}
+
+.comments .comments-content .user-name {
+    font-weight: bold;
 }
 
 .comments .comments-content .user .gravatar {
@@ -889,125 +875,104 @@ nav ul li:hover {
     border-radius: 50%;
 }
 
-.comments .comments-content .user-name,.c-time{
+.comments .comments-content  .c-time{
     position: relative;
-    display: inline-block;
+    display: inline;
     word-spacing: 2px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 16px;
     margin-right: 2px;
-    color: #a4a4a4;
-}
-
-.comments .comments-content .user-name:after {
-    content: " | ";
-    color: #e0e0e0;
-}
-
-.comments .comments-content .reply a:hover {
-    color: white;
-}
-
-.comments .comments-content .reply:hover > a{
-    color: white;
+    color: #ccc;
 }
 
 .comments .comments-content .user .user-name .author_name {
-    font-style: normal;
-}
-
-.comments .comments-content .user a {
     font-size: 16px;
+    line-height: 16px;
 }
 
-/* ## 8.2 评论列表-响应式*/
+.comments .comments-content .user .comment-edit-link, .comment-reply-link {
+    padding: 2px 6px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    background-color: #f4f4f4;
+    vertical-align: text-top;
+}
 
-@media screen and (max-width: 855px){
+.comments .comments-content .comment-edit-link:hover, .comment-reply-link:hover {
+    color: #fff;
+    background-color: #fb6666;
+}
 
-    .comments {
-        margin: 24px 0;
-/*        margin-right: 16px;*/
+
+@media screen and (max-width: 767px){
+    
+    .comments .parent {
+        margin-left: 56px;
     }
     
-    .comments h1 {
-/*        margin-left: -60px;*/
+    .comments .children {
         margin-left: 0px;
-    }
-    
-    .comments .comments-head {
-        padding: 6px;
-    }
-    
-    .comments .state {
-        padding: 6px;
-    }
-    
-    .comments button {
-        margin-left: 0px;
-    }
-    
-    .comments .comments-content .user img {
-        left: -40px;
-        border-radius: 50%;
-    }
-    
-    .relate h1 {
-        margin-left: 16px;
-    }
-    
-    .comments-content {
-        margin-top: 16px;
+        margin-right: 0px;
     }
 }
 
 
-/* ## 8.3 我的评论*/
+
+/* 我的评论*/
 
 .my-comments {
-    margin: 32px auto;
-    padding: 4px 16px;
-    max-width: 720px;
+    margin: 40px auto;
+    margin-bottom: 80px;
+    max-width: 480px;
     min-width: 295px;
     font-size: 16px;
-    background-color: #f3f3f3;
-    border-top: 2px solid #000;
     box-sizing:border-box;
     -moz-box-sizing:border-box; /* Firefox */
     -webkit-box-sizing:border-box; /* Safari */
 }
 
 .my-comments .state-c {
-    margin-top: 16px;
-    margin-bottom: 16px;
     padding: 0;
+    font-weight: bold;
+    color: #000;
 }
 
-.my-comments p {
+.my-comments .state-c a {
+    margin-left: 8px;
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 10px;
+    
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: #666;
+    text-decoration: none;
+}
+
+.my-comments .state-c a:hover {
+    color: #fff;
+    background-color: #fb6666;
+}
+
+.my-comments .state-c {
     font-size: 16px;
     line-height: 24px;
     color: #3b3b3b;
 }
 
-.my-comments p img {
-    margin-right: 8px;
+.my-comments .state-c img {
+    margin-right: 4px;
     width: 24px;
     border-radius: 50%;
-    vertical-align: bottom;
+    vertical-align: top;
     border: 1px solid white;
 }
 
-.my-comments p a {
-    margin-left: 4px;
-    padding: 2px 8px;
-    font-size: 8px;
-    color: white;
-    background-color: #9f9f9f;
-    border-radius: 24px;
-    text-decoration: none;
-}
 
-.my-comments p a:hover {
-    background-color: #3b3b3b;
-}
 
 .my-comments input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     font-size: 16px;
@@ -1018,42 +983,67 @@ nav ul li:hover {
 
 .my-comments input {
     
-    padding: 8px 12px;
-    margin-top: 12px;
-    margin-right: 10px;
-    margin-bottom: 16px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
     height: 40px;
     
     font-size: 16px;
-    color: #3a3a3a;
+    color: #000;
     border: none;
     border-bottom: 1px solid #e0e0e0;
+    border-radius: 2px;
     
     box-sizing:border-box;
     -moz-box-sizing:border-box; /* Firefox */
     -webkit-box-sizing:border-box; /* Safari */
 }
 
-.my-comments form .name {
-    width: 16%;
+.my-comments form .name,.email,.website {
+    position: relative;
+    width: 100%;
     min-width: 96px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow:  0px 1px 8px rgb(0,0,0,0.05) inset;
+    border: 1px solid #ccc;
 }
 
-.my-comments form .email, .website {
-    width: 39%;
-    min-width: 258px;
+.my-comments form .email {
+    width: 100%;
+    min-width: 96px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow:  0px 1px 8px rgb(0,0,0,0.05) inset;
+    border: 1px solid #ccc;
+}
+
+.my-comments form .website {
+    width: 100%;
+    min-width: 96px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow:  0px 1px 8px rgb(0,0,0,0.05) inset;
+    border: 1px solid #ccc;
+}
+
+.my-comments .my-comments-title {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
 }
 
 .my-comments form textarea {
     margin: 0 0 8px 0;
-    width: 98.5%;
-    height: 80px;
+    width: 100%;
+    min-height: 120px;
     padding: 8px 12px;
     font-size: 16px;
     color: #3a3a3a;
     border: none;
     resize: vertical;
     border-bottom: 1px solid #e0e0e0;
+    
+    box-shadow:  0px 1px 8px rgb(0,0,0,0.05) inset;
+    border: 1px solid #ccc;
+    border-radius: 2px;
     
     box-sizing:border-box;
     -moz-box-sizing:border-box; /* Firefox */
@@ -1062,314 +1052,300 @@ nav ul li:hover {
 
 .my-comments form .ok {
     display: block;
-    float: right;
-    width: 160px;
+    width: 100%;
     height: 40px;
-    margin: 20px 10px 0;
+    margin: 8px 0;
     color: white;
     font-size: 14px;
-    background-color: #3b3b3b;
+    background-color: #000;
     border: none;
     border-radius: 2px;
     transition: all 0.25s ease-in-out;
 }
 
-.my-comments form .ok:after {
-    clear: both;
-}
 
 .my-comments form .ok:hover {
-    background-color: #515151;
+    background-color: #fb6666;
     cursor: pointer;
 }
 
 
+@media screen and (max-width: 767px){
+
+    .my-comments {
+        margin-top: 40px;
+    }
+    
+    .my-comments form .my-comments-title {
+       margin-left: 8px;
+    }
+    
+    .my-comments form textarea {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .my-comments form .name {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .my-comments form .email {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .my-comments form .website {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .my-comments form .ok {
+        border-radius: 0;
+    }
+    
+    .my-comments form .state-c {
+        margin-left: 8px;
+    }
+}
 
 
 
-/* # 9 MARKDOWN格式-----------------------------------------*/
+
+
+
+
+/*-------------------------------------8 MARKDOWN-------------------------------------*/
 
 
 /* ## 9.1 全局设置*/
 
 .article *::selection {
     color: #fff;
-    background-color: #333;
+    background-color: #fb6666;
 }
 
-.article p {
-    margin: 0 auto;
-    margin-top: 20px;
+.article .article-content p {
+    margin: 8px auto;
+    margin-bottom: 32px;
     max-width: 800px;
+    font-size: 18px;
+    line-height: 32px;
 }
 
-/* ## 9.2 标题*/
+/*标题*/
 
-.article pre {
-    margin: 0 auto;
-}
-
-.article h1 {
-    margin: 0 auto;
-    margin-top: 48px;
-    max-width: 800px;
-    text-align: center;
-    line-height: 2em;
-}
-
-.article h2 {
+.article .article-content h1 {
     position: relative;
-    margin: 0 auto;
-    font-size: 1.5em;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fb6666;
     line-height: 2em;
-    font-weight: bolder;
-    color: #333;
+    text-align: center;
+}
+
+.article .article-content h2 {
+    position: relative;
+    margin: 40px auto;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
     max-width: 800px;
 }
 
-.article h2:before {
+.article .article-content h2:before {
     position: absolute;
     left: -40px;
     content: "##";
-    font-weight: lighter;
-    color: #ccc;
-    max-width: 800px;
+    color: #fb6666;
 }
 
-.article h3 {
+.article .article-content h3 {
     position: relative;
-    margin:0 auto;
-    font-size: 1.2em;
-    line-height: 1.8em;
-    font-weight: bolder;
-    color: #333;
-    max-width: 800px;
+    margin:32px auto;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
 }
 
-.article h3:before {
+.article .article-content h3:before {
     position: absolute;
     left: -48px;
     content: "###";
-    font-weight: lighter;
-    color: #ccc;
+    font-weight: normal;
+    color: #fb6666;
 }
 
-.article h4 {
+.article .article-content h4 {
     position: relative;
-    margin:0 auto;
-    font-size: 1em;
+    margin:16px auto;
+    font-size: 16px;
     font-weight: bolder;
-    line-height: 1.5em;
+    line-height: 24px;
     max-width: 800px;
 }
 
-.article h4:before {
+.article .article-content h4:before {
     position: absolute;
-    left: -64px;
+    left: -56px;
     content: "####";
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #ccc;
+    font-weight: bold;
+    color: #fb6666;
 }
 
-.article h5 {
+.article .article-content h5 {
     position: relative;
     margin:0 auto;
-    font-size: 1em;
-    font-weight: bolder;
-    line-height: 1.5em;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
     max-width: 800px;
 }
 
-.article h5:before {
+.article .article-content h5:before {
     position: absolute;
-    left: -72px;
+    left: -66px;
     content: "#####";
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #ccc;
+    font-weight: bold;
+    color: #fb6666;
 }
 
-.article h6 {
-    line-height: 1.5em;
-    font-weight: 700;
+.article .article-content h6 {
+    position: relative;
     margin:0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
     max-width: 800px;
 }
 
+/*分割线*/
 
-.article hr {
-    margin: 32px;
-    background-color: #ccc;
+.article .article-content hr {
+    margin: 56px 0;
+    background-color: #f4f4f4;
     border: 0;
     height: 1px;
-    max-width: 800px;
-}
-
-/* ### 9.2.1 标签和时间*/
-
-.article .tag {
-    margin: 16px auto;
-    font-size: 1em;
-    color: #ccc;
-    text-align: center;
-}
-
-.article .tag span {
-    margin: 0 4px;
-}
-
-.article .tag a {
-    color: #ccc;
-}
-
-.article .time {
-    font-size: 1em;
-    font-weight: 300;
-    text-align: center;
-    color: #ccc;
 }
 
 
 
-/* ## 9.3 内容*/
+/*内容*/
 
-.article p a {
-    color: crimson;
+
+/*链接*/
+.article .article-content p a {
+    color: #fb6666;
 }
 
-.article p a:hover {
-    color: crimson;
-    border-bottom: 1px solid crimson;
+.article .article-content p a:hover {
+    border-bottom: 1px solid #fb6666;
 }
 
-.article p code {
-    padding: 6px 8px;
-    border-radius: 1px;
-    border-top: 2px solid #ccc;
-}
-
-.article pre {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    padding: 4px;
+/*代码*/
+.article .article-content p code {
+    padding: 8px;
     border-radius: 2px;
-    line-height: 22px;
-    text-align: left;
-    border-top: 2px solid #ccc;
-    background-color: #f8f8f8;
+    color: #000;
+    background-color: #f4f4f4;
+}
+
+/*代码块*/
+.article .article-content pre {
+    padding: 8px;
+    border-radius: 2px;
+    line-height: 24px;
+    color: #000;
+    background-color: #f4f4f4;
     max-width: 800px;
 }
 
-/* ## 9.4 图片区域*/
-
-
-.article div {
-    max-width: 100%;
+/*引用*/
+.article .article-content blockquote {
+    padding-left: 8px;
+    color: #666;
+    border-left: 2px solid #fb6666;
 }
 
-.article div .wp-caption-text {
-    color: #ccc;
-    font-size: 0.8em;
+/*加粗*/
+.article .article-content p strong {
+    font-weight: bold;
 }
 
-.article div img {
-    margin-bottom: 0px;
+.article .article-content p strong:before, strong:after {
+    content: " ";
 }
 
-.article p img {
-    max-width: 100%;
-    height: auto;
-}
-
-.article .aligncenter {
-    display: block;
-    margin: 0 auto;
-}
-
-.article .alignleft {
-    float: left;
-    margin-top: 8px;
-    margin-right: 16px;
-}
-
-.article .alignright {
-    float: right;
-    margin-top: 8px;
-    margin-left: 16px;
+/*斜体*/
+.article .article-content p em {
+    font-style: italic;
 }
 
 
-/* ## 9.5 列表*/
 
-.article ol {
+
+/*列表*/
+.article .article-content ol {
     list-style: none;
     counter-reset: li-counter 0;
     max-width: 800px;
 	margin: 24px auto;
 }
 
-.article ol li {
+.article .article-content ol li {
     position: relative;
     margin-bottom: 12px;
     list-style-type: none;
     counter-reset: 0;
 }
 
-.article ol li:before {
+.article .article-content ol li:before {
     position: absolute;
-    left: -18px;
+    left: -20px;
     content: counter(li-counter);
     counter-increment: li-counter;
-    font-weight: 400;
-    color: #ccc;
+    color: #fb6666;
 }
 
-.article ul {
+.article .article-content ul {
     max-width: 800px;
     margin: 24px auto;
 }
 
-.article ul li{
+.article .article-content ul li{
     position: relative;
     margin-bottom: 12px;
+    margin-right: 8px;
+    line-height: 24px;
 }
 
-.article ul li:before {
+
+/*列表中的图片*/
+.article .article-content ul li .alignleft, .alignright, .aligncenter {
+    float: none;
+}
+
+.article .article-content ul li:before {
     position: absolute;
-    left: -18px;
+    left: -20px;
     content: '•';
-    font-weight: 400;
-    color: #ccc;
+    color: #fb6666;
+}
+
+.article .article-content ul li .wp-caption, .alignleft, .alignright, .aligncenter {
+    display: inline;
+    float: none;
 }
 
 
-/* ## 9.6 引用*/
 
-.article blockquote p{
-    position: relative;
-    color: #999;
-    margin-bottom: 32px;
-}
-
-.article blockquote p:before {
-    position: absolute;
-    left: -24px;
-    content: '|';
-    color: #ccc;
-}
-
-.article p strong:before {
-    content: "「 ";
-}
-
-.article p strong:after {
-    content: " 」";
-}
-
-
-/* ## 9.7 表格*/
-
+/*表格*/
 .article table {
     margin: 32px auto;
     width: 100%;
@@ -1377,9 +1353,9 @@ nav ul li:hover {
 }
 
 .article table th {
-    line-height: 40px;
-    font-weight: 400;
+    line-height: 32px;
     padding: 8px;
+    border: 1px solid #666;
 }
 
 .article table tr {
@@ -1387,160 +1363,218 @@ nav ul li:hover {
 }
 
 .article table td {
-    background-color: #f9f9f9;
+    padding: 8px;
 }
 
 .article table thead {
     color: #fff;
-    background-color: #333;
+    background-color: #000;
 }
 
 .article table tbody {
-    line-height: 40px;
-    padding: 16px;
+    background-color: #f4f4f4;
 }
 
-.article p,ul,li {
-    font-size: 16px;
-    font-weight: 400;
-    color: #333;
-    line-height: 32px;
+
+
+
+
+/*图片区域*/
+
+/*换行-不带文字说明的图片*/
+
+/*居左*/
+.article .article-content p .alignleft {
+    margin: 8px 24px 16px 0px;
+    float: left;
 }
 
-.article ul li {
-    list-style: none;
+/*居右*/
+.article .article-content p .alignright {
+    margin: 8px 0px 16px 24px;
+    float: right;
 }
 
-.article ol li {
-    list-style: none;
+/*换行-带文字说明的图片*/
+
+.article .article-content .wp-caption {
+    margin: 0 auto;
+    max-width: 100%;
 }
 
-.article li a {
-    color: crimson;
+/*居左*/
+.article .article-content .wp-caption.alignleft {
+    margin: 8px 24px 0px 0px;
+    float: left;
 }
 
-.article li a:hover {
-    border-bottom: 1px solid crimson;
+/*居右*/
+.article .article-content .wp-caption.alignright {
+    margin: 8px 0px 0px 24px;
+    float: right;
 }
+
+/*居中*/
+.article .article-content .wp-caption.aligncenter {
+    display: block;
+}
+
+/*列表中的图片*/
+
+.article .article-content li img.alignleft, img.alignright, img.aligncenter {
+    margin-top: 8px;
+    float: none;
+}
+
+.article .article-content li div.alignleft, div.alignright, div.aligncenter {
+    margin-top: 8px;
+    float: none;
+}
+
+.article .wp-caption .wp-caption-text {
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 0;
+    margin-bottom: 8px;
+}
+
+.article .wp-caption img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article p img {
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin: 8px auto;
+}
+
+
 
 
 /* ## 8.2 响应式*/
 
-@media screen and (max-width: 855px){
+@media screen and (max-width: 767px){
     
-    .content-index .relate-post, .content-index .relate-state {
-        padding: 6px;
+    .article {
+        margin: 24px auto;
     }
     
-    .article h1,.article h2,.article h3,.article h4,.article h5,.article h6,.article p{
-        margin-left: 6px;
-        margin-right: 6px;
+    .article .article-head .title {
+        margin-left: 24px;
+        margin-right: 24px;
+        line-height: 44px;
     }
     
-    .article ul, .article ol {
-        margin-left: 32px;
+    .article .article-content {
+        margin: 40px auto;
+    }
+
+    .article .article-content p {
+        margin-bottom: 24px;
+        margin-left: 8px;
+        margin-right: 8px;
     }
     
-    .article h2:before, .article h3:before, .article h4:before, .article h5:before, .article h6:before {
-        position: absolute;
-        left: 0px;
-        top: -18px;
-        font-size: 0.8em;
-        font-weight: 200;
+    .article .article-content h1 {
+        
+    }
+    
+    
+    .article .article-content h2 {
+        margin: 24px auto;
+        margin-left: 48px;
+    }
+    
+    .article .article-content h3 {
+        margin-left: 56px;
+    }
+    
+    .article .article-content h4 {
+        margin-left: 60px;
+    }
+    
+    .article .article-content h5 {
+        margin-left: 72px;
+    }
+    
+    .article .article-content h6 {
+        margin-left: 8px;
+    }
+    
+    .article .article-content ul {
+        margin-left: 24px;
+        margin-right: 8px;
+    }
+    
+    .article .article-content ol {
+        margin-left: 24px;
+        margin-right: 8px;
+    }
+    
+    .article .wp-caption .wp-caption-text {
         color: #ccc;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 8px;
     }
     
-    .article h2:before {
-        top: -24px;
-        content: "##";
+    .article .article-content hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
-    
-    .article h3:before {
-        content: "###";
-    }
-    
-    .article h4:before {
-        content: "####";
-    }
-    
-    .article h5:before {
-        content: "#####";
-    }
-    
-    .article div img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    .article p img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    .article .alignleft, .article .alignright {
-        margin-left: 0;
-        margin-right: 0;
-        float: none;
-    }
-    
-    .article blockquote p{
-        margin-left: 0;
-        margin-right: 0;
-        padding: 8px;
-        border-left: 2px solid #999;
-        color: #333;
-        background-color: #f8f8f8;
-    }
-    
-    
 }
+
+    
+    
+
+
+
+
+
 
 
 /* # 10 归档页*/
 
 .wrap .archive-category {
-    width: 100%;
-    margin: 80px auto;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 112px;
+    margin-bottom: 164px;
 }
 
 .wrap .archive-category h1{
-    text-align: center;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+    font-weight: bold;
 }
 
 .archive-category h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 200;
+    margin-left: 144px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 28px;
+    color: #999;
 }
 
-.wrap .archive-category .archive hr{
-    margin: 40px auto;
+@media screen and (max-width: 767px) {
+    .wrap .archive-category {
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .wrap .archive-category h1{
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .archive-category h2 {
+        margin-left: 72px;
+    }
 }
 
-.archive-category .archive{
-    padding-left: 0;
-}
 
 
-/* # 11 其他内容 */
-
-.article .sharedaddy {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 6px;
-}
-
-.article .sharedaddy .sd-title:before {
-    border: none;
-}
-
-.article .sharedaddy ul li:before {
-    content: '';
-}
-
-.article .sharedaddy span {
-    display: none;
-}
 

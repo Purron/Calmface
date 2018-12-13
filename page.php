@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php include 'topbar.php';?>
         
 <?php if ( has_post_thumbnail() ) : ?>
 <div class="h-pic" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
